@@ -28,7 +28,7 @@ Node.js (v18+ recommended)
 npm
 
 Running Pokemon Backend API (http://localhost:3001
- by default)
+by default)
 
 Installation
 
@@ -37,39 +37,34 @@ Clone the repository (if not already done)
 git clone <your-repo-url>
 cd pokemon-frontend
 
-
 Install dependencies
 
 npm install
-
 
 Environment Configuration
 
 cp .env.example .env
 
-
 Update .env with your backend API URL (optional, defaults to http://localhost:3001):
 
 REACT_APP_API_URL=http://localhost:3001
 
-
 Start the application
 
 npm start
-
 
 The app will run on http://localhost:3000
 .
 
 Project Structure
 src/
-├── components/           # Reusable components (PokemonProfileCard, PokemonListItem, LoadingSpinner, etc.)
-├── contexts/             # AuthContext for global authentication state
-├── pages/                # Main pages (MainPage, MyPokemonPage, PokemonDetailPage, etc.)
-├── services/             # API services (authService, pokemonService, pokeApiService)
-├── types/                # TypeScript types (Pokemon, User, AuthResponse, etc.)
-├── App.tsx               # Main App component with routing
-└── index.tsx             # Application entry point
+├── components/ # Reusable components (PokemonProfileCard, PokemonListItem, LoadingSpinner, etc.)
+├── contexts/ # AuthContext for global authentication state
+├── pages/ # Main pages (MainPage, MyPokemonPage, PokemonDetailPage, etc.)
+├── services/ # API services (authService, pokemonService, pokeApiService)
+├── types/ # TypeScript types (Pokemon, User, AuthResponse, etc.)
+├── App.tsx # Main App component with routing
+└── index.tsx # Application entry point
 
 Routing
 
@@ -128,7 +123,6 @@ Authentication state is provided globally via AuthContext:
 
 const { user, accessToken, login, logout, register, isAuthenticated } = useAuth();
 
-
 isAuthenticated controls access to protected routes
 
 user contains logged-in user info
@@ -146,8 +140,8 @@ npm run build — Build production-ready static files
 npm run lint — Lint the code
 
 Environment Variables
-Variable	Description	Default
-REACT_APP_API_URL	Backend API base URL	http://localhost:3001
+Variable Description Default
+REACT_APP_API_URL Backend API base URL http://localhost:3001
 Security & Auth
 
 JWT-based authentication
